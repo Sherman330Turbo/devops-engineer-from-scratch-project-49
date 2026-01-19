@@ -10,7 +10,7 @@ NO_ANSWER = "no"
 
 
 def get_random_number(begin: int, end: int) -> int:
-    return random.randint(begin, end)
+    return random.randint(begin, end)  # NOSONAR - not security-sensitive;
 
 
 def get_correct_answer(question: int) -> str:
