@@ -1,10 +1,15 @@
+from collections.abc import Callable
+
 import prompt
+
+from brain_games.types import GetRound
 
 ROUNDS = 3
 
 
-def engine(cli, game) -> None:
-    rules, get_round = game()
+def engine(cli, game: Callable[[], tuple[str, Callable[[], GetRound]]]) -> None:
+    rules, get_round_generator = game()
+    get_round = get_round_generator()
 
     print(rules)
     correct_answers = 0
