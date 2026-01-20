@@ -8,6 +8,8 @@
 
 Арифметическая прогрессия: https://asciinema.org/a/jWIvftSplqhmLJaA
 
+Определеие простоты: https://asciinema.org/a/4zUfloU8ufQmYp2d
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/Sherman330Turbo/devops-engineer-from-scratch-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Sherman330Turbo/devops-engineer-from-scratch-project-49/actions)

@@ -1,7 +1,7 @@
 from collections.abc import Callable
 
 from brain_games.random import randint
-from brain_games.types import GetRound
+from brain_games.types import GetRound, Round
 
 RANGE = 10
 
@@ -20,7 +20,7 @@ def get_question(progression: list[int], hidden_index: int) -> str:
 
 
 def get_round_generator() -> GetRound:
-    def get_round() -> dict[str, str]:
+    def get_round() -> Round:
         base = randint(0, 5)
         delta = randint(2, 9)
         progression = [base + (delta * idx) for idx in range(RANGE)]

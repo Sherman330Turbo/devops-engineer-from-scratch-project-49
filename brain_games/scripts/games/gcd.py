@@ -1,7 +1,7 @@
 from collections.abc import Callable
 
 from brain_games.random import randint
-from brain_games.types import GetRound
+from brain_games.types import GetRound, Round
 
 
 def get_correct_answer(a: int, b: int) -> str:
@@ -12,7 +12,7 @@ def get_correct_answer(a: int, b: int) -> str:
 
 
 def get_round_generator() -> GetRound:
-    def get_round() -> dict[str, str]:
+    def get_round() -> Round:
         operands = [randint(1, 100), randint(1, 100)]
 
         return {

@@ -1,17 +1,20 @@
 from collections.abc import Callable
 
-from brain_games.random import randint, sample
-from brain_games.types import GetRound
+from brain_games.random import randint
+from brain_games.types import GetRound, Round
 
 
-def get_correct_answer(question: int) -> str:
-    return "yes" if question % 2 == 0 else "no"
+def is_even(number: int) -> bool:
+    return number % 2 == 0
 
 
 def get_round_generator() -> GetRound:
-    def get_round() -> dict[str, str]:
+    def get_round() -> Round:
         question = randint(1, 100)
-        return {"question": question, "answer": get_correct_answer(question)}
+        return {
+            "question": str(question),
+            "answer": "yes" if is_even(question) else "no",
+        }
 
     return get_round
 
