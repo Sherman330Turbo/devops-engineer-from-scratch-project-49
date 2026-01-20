@@ -1,11 +1,7 @@
-import random
 from collections.abc import Callable
 
+from brain_games.random import randint, sample
 from brain_games.types import GetRound
-
-
-def get_random_number(begin: int, end: int) -> int:
-    return random.randint(begin, end)  # NOSONAR - not security-sensitive
 
 
 def get_correct_answer(operands, sign) -> str:
@@ -27,9 +23,7 @@ def get_sign_generator() -> Callable[[], str]:
     def get_new_sign() -> str:
         nonlocal shuffled_sign
         if len(shuffled_sign) == 0:
-            shuffled_sign = random.sample(
-                signs, k=len(signs)
-            )  # NOSONAR - not security-sensitive
+            shuffled_sign = sample(signs, k=len(signs))
         return shuffled_sign.pop()
 
     return get_new_sign
@@ -39,7 +33,7 @@ def get_round_generator() -> GetRound:
     get_sign = get_sign_generator()
 
     def get_round():
-        operands = (get_random_number(-10, 10), get_random_number(-10, 10))
+        operands = (randint(-10, 10), randint(-10, 10))
         sign = get_sign()
 
         question = f"{operands[0]} {sign} {operands[1]}"

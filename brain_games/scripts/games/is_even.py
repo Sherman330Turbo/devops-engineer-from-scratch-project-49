@@ -1,11 +1,7 @@
-import random
 from collections.abc import Callable
 
+from brain_games.random import randint, sample
 from brain_games.types import GetRound
-
-
-def get_random_number(begin: int, end: int) -> int:
-    return random.randint(begin, end)  # NOSONAR - not security-sensitive;
 
 
 def get_correct_answer(question: int) -> str:
@@ -14,7 +10,7 @@ def get_correct_answer(question: int) -> str:
 
 def get_round_generator() -> GetRound:
     def get_round() -> dict[str, str]:
-        question = get_random_number(1, 100)
+        question = randint(1, 100)
         answer = get_correct_answer(question)
         return {"question": question, "answer": answer}
 
