@@ -27,7 +27,9 @@ def get_sign_generator() -> Callable[[], str]:
     def get_new_sign() -> str:
         nonlocal shuffled_sign
         if len(shuffled_sign) == 0:
-            shuffled_sign = random.sample(signs, k=len(signs))
+            shuffled_sign = random.sample(
+                signs, k=len(signs)
+            )  # NOSONAR - not security-sensitive
         return shuffled_sign.pop()
 
     return get_new_sign

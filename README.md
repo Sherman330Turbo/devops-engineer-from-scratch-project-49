@@ -1,6 +1,8 @@
 ## Brain-games
 
-asciinema is here: https://asciinema.org/a/IVCjksUBWle7ODE9
+Чет-нечет: https://asciinema.org/a/IVCjksUBWle7ODE9
+
+Калькулятор: https://asciinema.org/a/4l0KY8T4Zn3lGC8G
 
 ### Hexlet tests and linter status:
 
