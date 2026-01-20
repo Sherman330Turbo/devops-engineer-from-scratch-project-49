@@ -1,13 +1,13 @@
 import prompt
 
 
-def get_user_name():
-    return prompt.string("May I have your name? ")
+class Cli:
+    def __init__(self):
+        print("Welcome to Brain Games!")
+        self.user_name = prompt.string("May I have your name? ")
 
+    def welcome(self):
+        print(f"Hello, {self.user_name}!")
 
-def welcome_user(user_name: str = None):
-    print(f"Hello, {get_user_name() if user_name is None else user_name}!")
-
-
-def congrats_user(user_name: str = None):
-    print(f"Congratulations{'' if user_name is None else f', {user_name}'}!")
+    def congrats(self):
+        print(f"Congratulations, {self.user_name}!")
