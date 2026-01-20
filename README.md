@@ -6,6 +6,8 @@
 
 Наибольший общий делитель: https://asciinema.org/a/cCkjqOOAm4mCje4B
 
+Арифметическая прогрессия: https://asciinema.org/a/jWIvftSplqhmLJaA
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/Sherman330Turbo/devops-engineer-from-scratch-project-49/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Sherman330Turbo/devops-engineer-from-scratch-project-49/actions)

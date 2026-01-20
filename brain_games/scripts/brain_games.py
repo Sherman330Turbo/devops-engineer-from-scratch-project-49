@@ -5,6 +5,7 @@ from brain_games.scripts.engine import engine
 from brain_games.scripts.games.calc import calc_game
 from brain_games.scripts.games.gcd import gcd_game
 from brain_games.scripts.games.is_even import is_even_game
+from brain_games.scripts.games.progression import progression_game
 
 
 def run(game) -> None:
@@ -19,6 +20,8 @@ def run(game) -> None:
             engine(cli, calc_game)
         case "gcd":
             engine(cli, gcd_game)
+        case "progression":
+            engine(cli, progression_game)
 
 
 def main() -> None:
@@ -43,3 +46,7 @@ def run_calc_game() -> None:
 
 def run_gcd_game() -> None:
     run("gcd")
+
+
+def run_progression_game() -> None:
+    run("progression")

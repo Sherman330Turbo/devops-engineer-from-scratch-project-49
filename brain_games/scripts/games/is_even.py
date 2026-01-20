@@ -11,8 +11,7 @@ def get_correct_answer(question: int) -> str:
 def get_round_generator() -> GetRound:
     def get_round() -> dict[str, str]:
         question = randint(1, 100)
-        answer = get_correct_answer(question)
-        return {"question": question, "answer": answer}
+        return {"question": question, "answer": get_correct_answer(question)}
 
     return get_round
 

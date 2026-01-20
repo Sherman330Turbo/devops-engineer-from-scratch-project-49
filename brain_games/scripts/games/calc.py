@@ -36,9 +36,10 @@ def get_round_generator() -> GetRound:
         operands = (randint(-10, 10), randint(-10, 10))
         sign = get_sign()
 
-        question = f"{operands[0]} {sign} {operands[1]}"
-        answer = get_correct_answer(operands, sign)
-        return {"question": question, "answer": answer}
+        return {
+            "question": f"{operands[0]} {sign} {operands[1]}",
+            "answer": get_correct_answer(operands, sign),
+        }
 
     return get_round
 

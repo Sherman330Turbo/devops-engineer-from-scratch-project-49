@@ -14,10 +14,11 @@ def get_correct_answer(a: int, b: int) -> str:
 def get_round_generator() -> GetRound:
     def get_round() -> dict[str, str]:
         operands = [randint(1, 100), randint(1, 100)]
-        question = f"{operands[0]} {operands[1]}"
-        answer = get_correct_answer(*sorted(operands))
 
-        return {"question": question, "answer": answer}
+        return {
+            "question": f"{operands[0]} {operands[1]}",
+            "answer": get_correct_answer(*sorted(operands)),
+        }
 
     return get_round
 
