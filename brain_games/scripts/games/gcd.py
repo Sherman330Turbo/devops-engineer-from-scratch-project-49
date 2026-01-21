@@ -3,6 +3,9 @@ from collections.abc import Callable
 from brain_games.random import randint
 from brain_games.types import GetRound, Round
 
+MIN = 1
+MAX = 100
+
 
 def get_correct_answer(a: int, b: int) -> str:
     while b != 0:
@@ -13,7 +16,7 @@ def get_correct_answer(a: int, b: int) -> str:
 
 def get_round_generator() -> GetRound:
     def get_round() -> Round:
-        operands = [randint(1, 100), randint(1, 100)]
+        operands = [randint(MIN, MAX), randint(MIN, MAX)]
 
         return {
             "question": f"{operands[0]} {operands[1]}",

@@ -1,6 +1,6 @@
 import argparse
 
-from brain_games.cli import Cli
+from brain_games.cli import ask_name, welcome
 from brain_games.scripts.engine import engine
 from brain_games.scripts.games.calc import calc_game
 from brain_games.scripts.games.gcd import gcd_game
@@ -10,21 +10,21 @@ from brain_games.scripts.games.progression import progression_game
 
 
 def run(game) -> None:
-    cli = Cli()
-    cli.ask_name()
-    cli.welcome()
+    print("Welcome to the Brain Games!")
+    user_name = ask_name()
+    welcome(user_name)
 
     match game:
         case "even":
-            engine(cli, is_even_game)
+            engine(user_name, is_even_game)
         case "calc":
-            engine(cli, calc_game)
+            engine(user_name, calc_game)
         case "gcd":
-            engine(cli, gcd_game)
+            engine(user_name, gcd_game)
         case "progression":
-            engine(cli, progression_game)
+            engine(user_name, progression_game)
         case "prime":
-            engine(cli, is_prime_game)
+            engine(user_name, is_prime_game)
 
 
 def main() -> None:

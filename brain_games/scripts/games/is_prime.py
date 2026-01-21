@@ -4,6 +4,9 @@ from collections.abc import Callable
 from brain_games.random import randint
 from brain_games.types import GetRound, Round
 
+MIN = 1
+MAX = 100
+
 
 def is_prime(number: int) -> bool:
     if number < 2:
@@ -21,7 +24,7 @@ def is_prime(number: int) -> bool:
 
 def get_round_generator() -> GetRound:
     def get_round() -> Round:
-        target = randint(1, 50)
+        target = randint(MIN, MAX)
 
         return {
             "question": str(target),

@@ -4,6 +4,10 @@ from brain_games.random import randint
 from brain_games.types import GetRound, Round
 
 RANGE = 10
+BASE_MIN = 0
+BASE_MAX = 5
+DELTA_MIN = 1
+DELTA_MAX = 100
 
 
 def get_question(progression: list[int], hidden_index: int) -> str:
@@ -21,8 +25,8 @@ def get_question(progression: list[int], hidden_index: int) -> str:
 
 def get_round_generator() -> GetRound:
     def get_round() -> Round:
-        base = randint(0, 5)
-        delta = randint(2, 9)
+        base = randint(BASE_MIN, BASE_MAX)
+        delta = randint(DELTA_MIN, DELTA_MAX)
         progression = [base + (delta * idx) for idx in range(RANGE)]
         hidden_index = randint(0, RANGE - 1)
 

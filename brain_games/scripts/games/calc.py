@@ -3,6 +3,9 @@ from collections.abc import Callable
 from brain_games.random import randint, sample
 from brain_games.types import GetRound, Round
 
+MIN = -10
+MAX = 10
+
 
 def get_correct_answer(operands, sign) -> str:
     match sign:
@@ -33,7 +36,7 @@ def get_round_generator() -> GetRound:
     get_sign = get_sign_generator()
 
     def get_round() -> Round:
-        operands = (randint(-10, 10), randint(-10, 10))
+        operands = (randint(MIN, MAX), randint(MIN, MAX))
         sign = get_sign()
 
         return {

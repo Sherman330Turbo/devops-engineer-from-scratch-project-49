@@ -3,6 +3,9 @@ from collections.abc import Callable
 from brain_games.random import randint
 from brain_games.types import GetRound, Round
 
+MIN = 1
+MAX = 100
+
 
 def is_even(number: int) -> bool:
     return number % 2 == 0
@@ -10,7 +13,7 @@ def is_even(number: int) -> bool:
 
 def get_round_generator() -> GetRound:
     def get_round() -> Round:
-        question = randint(1, 100)
+        question = randint(MIN, MAX)
         return {
             "question": str(question),
             "answer": "yes" if is_even(question) else "no",

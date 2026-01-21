@@ -2,12 +2,15 @@ from collections.abc import Callable
 
 import prompt
 
+from brain_games.cli import congrats
 from brain_games.types import GetRound
 
 ROUNDS = 3
 
 
-def engine(cli, game: Callable[[], tuple[str, Callable[[], GetRound]]]) -> None:
+def engine(
+    user_name: str, game: Callable[[], tuple[str, Callable[[], GetRound]]]
+) -> None:
     rules, get_round_generator = game()
     get_round = get_round_generator()
 
@@ -26,8 +29,8 @@ def engine(cli, game: Callable[[], tuple[str, Callable[[], GetRound]]]) -> None:
                 f"{answer} is wrong answer ;(. "
                 f"Correct answer was {game_round['answer']}."
             )
-            print(f"Let's try again, {cli.user_name}!")
+            print(f"Let's try again, {user_name}!")
             break
 
     if correct_answers == ROUNDS:
-        cli.congrats()
+        congrats(user_name)
