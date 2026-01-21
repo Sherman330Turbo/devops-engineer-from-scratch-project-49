@@ -9,5 +9,5 @@ def welcome_user(user_name):
     print(f"Hello, {user_name}!")
 
 
-def congrats(user_name):
+def congrats_user(user_name):
     print(f"Congratulations, {user_name}!")

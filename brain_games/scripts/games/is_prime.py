@@ -13,6 +13,8 @@ def is_prime(number: int) -> bool:
         return False
     if number == 2:
         return True
+    if number % 2 == 0:
+        return False
 
     target = math.isqrt(number)
     for idx in range(3, target + 1, 2):

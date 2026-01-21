@@ -2,7 +2,7 @@ from collections.abc import Callable
 
 import prompt
 
-from brain_games.cli import congrats
+from brain_games.cli import congrats_user
 from brain_games.types import GetRound
 
 ROUNDS = 3
@@ -33,4 +33,4 @@ def engine(
             break
 
     if correct_answers == ROUNDS:
-        congrats(user_name)
+        congrats_user(user_name)

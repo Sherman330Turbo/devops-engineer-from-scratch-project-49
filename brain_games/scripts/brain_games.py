@@ -1,6 +1,6 @@
 import argparse
 
-from brain_games.cli import ask_name, welcome
+from brain_games.cli import ask_name, welcome_user
 from brain_games.scripts.engine import engine
 from brain_games.scripts.games.calc import calc_game
 from brain_games.scripts.games.gcd import gcd_game
@@ -12,7 +12,7 @@ from brain_games.scripts.games.progression import progression_game
 def run(game) -> None:
     print("Welcome to the Brain Games!")
     user_name = ask_name()
-    welcome(user_name)
+    welcome_user(user_name)
 
     match game:
         case "even":
