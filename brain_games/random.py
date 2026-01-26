@@ -1,4 +1,5 @@
 import random
+from typing import TypeVar
 
 """
 Модуль инкапсулирует в себе все применения псевдорандома в проекте
@@ -6,10 +7,12 @@ import random
 Только в геймплее игр
 """
 
+T = TypeVar("T")
+
 
 def randint(begin: int, end: int) -> int:
     return random.randint(begin, end)  # NOSONAR
 
 
-def sample(population: list, k: int) -> list:
-    return random.sample(population, k)  # NOSONAR
+def choice(population: list[T]) -> T:
+    return random.choice(population)  # NOSONAR

@@ -8,14 +8,37 @@
 Brain Games — учебный консольный проект на Python, представляющий собой набор мини-игр для тренировки базового мышления
 и знакомства с архитектурой CLI-приложений.
 
+### Как установить:
+
+```bash
+make install
+make build
+make package-install
+```
+
+### Как запустить:
+
+Запуск каждой игры выполняется через собственную команду в терминале
+
+* Чет-нечет: ```brain-even```
+* Калькулятор ```brain-calc```
+* Наибольший общий делитель ```brain-gcd```
+* Арифметическая прогрессия ```brain-progression```
+* Определение простоты ```brain-prime```
+
 ### Demo:
 
-Чет-нечет: https://asciinema.org/a/IVCjksUBWle7ODE9
+Чет-нечет:
+[![asciicast](https://asciinema.org/a/IVCjksUBWle7ODE9.svg)](https://asciinema.org/a/IVCjksUBWle7ODE9)
 
-Калькулятор: https://asciinema.org/a/4l0KY8T4Zn3lGC8G
+Калькулятор:
+[![asciicast](https://asciinema.org/a/4l0KY8T4Zn3lGC8G.svg)](https://asciinema.org/a/4l0KY8T4Zn3lGC8G)
 
-Наибольший общий делитель: https://asciinema.org/a/cCkjqOOAm4mCje4B
+Наибольший общий делитель:
+[![asciicast](https://asciinema.org/a/cCkjqOOAm4mCje4B.svg)](https://asciinema.org/a/cCkjqOOAm4mCje4B)
 
-Арифметическая прогрессия: https://asciinema.org/a/jWIvftSplqhmLJaA
+Арифметическая прогрессия:
+[![asciicast](https://asciinema.org/a/jWIvftSplqhmLJaA.svg)](https://asciinema.org/a/jWIvftSplqhmLJaA)
 
-Определеие простоты: https://asciinema.org/a/4zUfloU8ufQmYp2d
+Определение простоты:
+[![asciicast](https://asciinema.org/a/4zUfloU8ufQmYp2d.svg)](https://asciinema.org/a/4zUfloU8ufQmYp2d)

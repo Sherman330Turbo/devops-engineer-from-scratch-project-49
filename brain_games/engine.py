@@ -1,23 +1,15 @@
-from collections.abc import Callable
-
 import prompt
 
 from brain_games.cli import congrats_user
-from brain_games.types import GetRound
 
 ROUNDS = 3
 
 
-def engine(
-    user_name: str, game: Callable[[], tuple[str, Callable[[], GetRound]]]
-) -> None:
-    rules, get_round_generator = game()
-    get_round = get_round_generator()
-
-    print(rules)
+def engine(user_name: str, game) -> None:
+    print(game.DESCRIPTION)
     correct_answers = 0
     while correct_answers < ROUNDS:
-        game_round = get_round()
+        game_round = game.get_round()
         print(f"Question: {game_round['question']}")
         answer = prompt.string("Your answer: ")
 
