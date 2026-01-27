@@ -1,5 +1,10 @@
-from brain_games.scripts.brain_games import run
+from brain_games.engine import engine
+from brain_games.games import is_even
 
 
-def main() -> None:
-    run("even")
+def main():
+    engine(is_even)
+
+
+if __name__ == "__main__":
+    main()

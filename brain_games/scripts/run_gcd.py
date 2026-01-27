@@ -1,5 +1,10 @@
-from brain_games.scripts.brain_games import run
+from brain_games.engine import engine
+from brain_games.games import gcd
 
 
-def main() -> None:
-    run("gcd")
+def main():
+    engine(gcd)
+
+
+if __name__ == "__main__":
+    main()

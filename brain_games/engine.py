@@ -1,12 +1,20 @@
 import prompt
 
-from brain_games.cli import congrats_user
+from brain_games.cli import ask_name, congrats_user, welcome_user
 
 ROUNDS = 3
 
 
-def engine(user_name: str, game) -> None:
+def engine(game=None) -> None:
+    print("Welcome to the Brain Games!")
+    user_name = ask_name()
+    welcome_user(user_name)
+
+    if not game:
+        return
+
     print(game.DESCRIPTION)
+
     correct_answers = 0
     while correct_answers < ROUNDS:
         game_round = game.get_round()

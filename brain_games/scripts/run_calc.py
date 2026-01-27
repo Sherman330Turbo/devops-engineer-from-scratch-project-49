@@ -1,5 +1,10 @@
-from brain_games.scripts.brain_games import run
+from brain_games.engine import engine
+from brain_games.games import calc
 
 
-def main() -> None:
-    run("calc")
+def main():
+    engine(calc)
+
+
+if __name__ == "__main__":
+    main()

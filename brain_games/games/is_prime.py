@@ -1,10 +1,11 @@
 import math
+from random import randint
 
-from brain_games.random import randint
 from brain_games.types import Round
 
 MIN = 1
 MAX = 100
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number: int) -> bool:
@@ -23,11 +24,8 @@ def is_prime(number: int) -> bool:
     return True
 
 
-DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-
-
 def get_round() -> Round:
-    target = randint(MIN, MAX)
+    target = randint(MIN, MAX)  # NOSONAR
 
     return {
         "question": str(target),
