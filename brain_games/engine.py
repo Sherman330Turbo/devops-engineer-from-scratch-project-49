@@ -30,7 +30,6 @@ def engine(game=None) -> None:
                 f"Correct answer was {game_round['answer']}."
             )
             print(f"Let's try again, {user_name}!")
-            break
+            return
 
-    if correct_answers == ROUNDS:
-        congrats_user(user_name)
+    congrats_user(user_name)
